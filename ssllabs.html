@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"> 
+        <link rel='shortcut icon' type='image/x-icon' href='./favicon.ico' />
+
+        <title>Richard Prillwitz - A+ on SSL Labs</title>
+        
+        <meta name="description" content="How do get A+ rating on SSL Labs">
+        <meta name="keywords" content="SSL Labs, A+, configuration, NGINX">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#0000ee">
+
+        <style>
+            @font-face {
+              font-family: 'Roboto Mono', monospace;
+              src: URL('font/RobotoMono-Regular.ttf') format('truetype');
+            }
+            * {
+                font-family: 'Roboto Mono', monospace;
+                font-size: 15px;
+                margin: 0;
+                padding: 0;
+            }
+            a {
+                color: #0000ee;
+            }
+            section {
+                padding-bottom: 20px;
+            }
+            ul {
+                padding-top: 10px;
+            }
+            ul li {
+                padding-bottom: 10px;
+            }
+            ul li:last-child {
+                padding-bottom:0px;
+            }
+
+            code {
+                background: #efefef;
+            }
+        </style>
+
+    </head>
+    <body>
+        <section>
+            <p><h1>A+ on SSL Labs</h1></p>
+        </section>
+
+        <section>
+
+            <p><b>SSL/Cert</b> <u>[cli]</u></p>
+            <ul style="text-indent:80px;">
+                <li>
+                    <p><b>4096-bit private keys</b></p>
+                    <p style="text-indent:80px;">
+                        <code>
+                            openssl genrsa -out domain.com.key 4096
+                            certbot certonly -d domain.com --rsa-key-size 4096
+                        </code>
+                    </p>
+                </li>
+                <li>
+                    <p><b>Key exchange</b></p>
+                    <p style="text-indent:80px;">
+                        <code>
+                            openssl dhparam -dsaparam -out /etc/nginx/dh.pem 4096
+                        </code>
+                    </p>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <p><b>NGINX configuration</b> <u>[/etc/nginx/nginx.conf]</u></p>
+            <ul style="text-indent:80px;">
+                <li>
+                    <p><b>Hide NGINX version number</b></p>
+                    <p style="text-indent:80px;">
+                        <code>
+                            server_tokens off;
+                        </code>
+                    </p>
+                </li>
+                <li>
+                    <p><b>TLS 1.2 (+TLS 1.3)</b></p>
+                    <p style="text-indent:80px;">
+                        <code>
+                            ssl_protocols TLSv1.2;
+                        </code>
+                    </p>
+                </li>
+                <li>
+                    <p><b>ECDH curve</b></p>
+                    <p style="text-indent:80px;">
+                        <code>
+                            ssl_ecdh_curve X25519:prime256v1:secp521r1:secp384r1;
+                        </code>
+                    </p>
+                </li>
+
+                <li>
+                    <p><b>SSL ciphers</b></p>
+                    <p style="text-indent:80px;">
+                        <code>
+                            ssl_ciphers "ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES256-SHA384";
+                        </code>
+                    </p>
+                </li>
+
+                <li>
+                    <p><b>Key exchange</b></p>
+                    <p style="text-indent:80px;">
+                        <code>
+                            ssl_dhparam /etc/nginx/dh.pem;
+                        </code>
+                    </p>
+                </li>
+
+                <li>
+                    <p><b>BEAST attack</b></p>
+                    <p style="text-indent:80px;">
+                        <code>
+                            ssl_prefer_server_ciphers on;
+                        </code>
+                    </p>
+                </li>
+
+                <li>
+                    <p><b>HTTP Strict Transport Security</b></p>
+                    <p style="text-indent:80px;">
+                        <code>
+                            add_header Strict-Transport-Security "max-age=63072000; includeSubdomains" always;
+                        </code>
+                    </p>
+                </li>
+
+                <li>
+                    <p><b>Content-Security-Policy</b></p>
+                    <p style="text-indent:80px;">
+                        <code>
+                            add_header Content-Security-Policy "default-src 'none'; script-src 'self'; content-src 'self'; img-src 'self'; style-src 'self';" always;
+                        </code>
+                    </p>
+                </li>
+
+                <li>
+                    <p><b>Referrer-Policy</b></p>
+                    <p style="text-indent:80px;">
+                        <code>
+                            add_header Referrer-Policy "no-referrer";
+                        </code>
+                    </p>
+                </li>
+
+                <li>
+                    <p><b>Clickjacking protection</b></p>
+                    <p style="text-indent:80px;">
+                        <code>
+                            add_header X-Frame-Options "SAMEORIGIN" always;
+                        </code>
+                    </p>
+                </li>
+
+                <li>
+                    <p><b>X-XSS-Protection</b></p>
+                    <p style="text-indent:80px;">
+                        <code>
+                            add_header X-XSS-Protection "1; mode=block" always;
+                        </code>
+                    </p>
+                </li>
+
+                <li>
+                    <p><b>X-Content-Type-Options</b></p>
+                    <p style="text-indent:80px;">
+                        <code>
+                            add_header X-Content-Type-Options "nosniff" always;
+                        </code>
+                    </p>
+                </li>
+
+            </ul>
+
+        </section>
+
+        <section>
+            <p><b>SEE ALSO</b></p>
+            <p style="text-indent:80px;">
+               &lt;<a href="https://www.prillwitz.io/">https://www.prillwitz.io/</a>&gt; 
+            </p>
+            <p style="text-indent:80px;">
+               &lt;<a href="https://ssllabs.com/ssltest/analyze.html?d=www.prillwitz.io">www.prillwitz.io on ssllabs</a>&gt; 
+            </p>
+            <p style="text-indent:80px;">
+               &lt;<a href="./legal.html">disclaimer/imprint</a>&gt; 
+            </p>
+        </section>
+    </body>
+</html>
