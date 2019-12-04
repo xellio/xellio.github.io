@@ -38,10 +38,48 @@
             ul li:last-child {
                 padding-bottom:0px;
             }
+            .printonly {
+                display: none;
+            }
+
+            header {
+                -webkit-column-count: 3; /* Old Chrome, Safari and Opera */
+                -moz-column-count: 3; /* Old Firefox */
+                column-count: 3;
+            }
+
+            @media print {
+                body {
+                    padding:20px;
+                }
+                .noprint {
+                    display: none;
+                }
+                .printonly {
+                    display: block;
+                }
+                ul {
+                    list-style-type: none;
+                }
+                section {
+                    padding-bottom: 10px;
+                }
+            }
         </style>
 
     </head>
     <body>
+        <header class="printonly">
+            <section style="text-align:left;">
+                <p>Richard Prillwitz(1)</p>
+            </section>
+            <section style="text-align:center;">
+                <p>Curriculum Vitae</p>
+            </section>
+            <section style="text-align:right;">
+                <p>Richard Prillwitz(1)</p>
+            </section>
+        </header>
         <section>
             <p><b>NAME</b></p>
             <h1 style="padding-left: 80px;">Richard Prillwitz - Software Developer</h1>
@@ -52,29 +90,35 @@
         </section>
         <section>
             <p><b>DESCRIPTION</b></p>
-            <p style="text-indent:80px;">Experience</p>
-            <ul style="text-indent:80px;">
-                <li>
-                    <p><b>--Myra Security GmbH</b> <u>[May 2017 - Present]</u></p>
-                    <p style="text-indent:80px;">Senior Software Developer</p>
-                </li>
-                <li>
-                    <p><b>--Refined Labs GmbH</b> <u>[Jun 2014 - May 2017]</u></p>
-                    <p style="text-indent:80px;">Software Developer</p>
-                </li>
-                <li>
-                    <p><b>--redblue Marketing GmbH</b> <u>[Oct 2013 - May 2014]</u></p>
-                    <p style="text-indent:80px;">Software Developer</p>
-                </li>
-                <li>
-                    <p><b>--Sixt SE</b> <u>[Oct 2008 - Oct 2013]</u></p>
-                    <p style="text-indent:80px;">Software Developer</p>
-                </li>
-                <li>
-                    <p><b>--Jenomics GmbH</b> <u>[Aug 2007 - Oct 2008]</u></p>
-                    <p style="text-indent:80px;">Software Developer</p>
-                </li>
-            </ul>
+            <section class="printonly">
+                <p style="text-indent:80px;">I am highly motivated and enthusiastic always willing to gain new technology related skills.<p>
+                <p style="text-indent:80px;">My personal expectation to myself is to find and deliver the best possible solution to a problem.<p>
+            </section>
+            <section>
+                <p style="text-indent:80px;">Experience</p>
+                <ul style="text-indent:80px;">
+                    <li>
+                        <p><b>--Myra Security GmbH</b> <u>[May 2017 - Present]</u></p>
+                        <p style="text-indent:80px;">Senior Software Developer</p>
+                    </li>
+                    <li>
+                        <p><b>--Refined Labs GmbH</b> <u>[Jun 2014 - May 2017]</u></p>
+                        <p style="text-indent:80px;">Software Developer</p>
+                    </li>
+                    <li>
+                        <p><b>--redblue Marketing GmbH</b> <u>[Oct 2013 - May 2014]</u></p>
+                        <p style="text-indent:80px;">Software Developer</p>
+                    </li>
+                    <li>
+                        <p><b>--Sixt SE</b> <u>[Oct 2008 - Oct 2013]</u></p>
+                        <p style="text-indent:80px;">Software Developer</p>
+                    </li>
+                    <li>
+                        <p><b>--Jenomics GmbH</b> <u>[Aug 2007 - Oct 2008]</u></p>
+                        <p style="text-indent:80px;">Software Developer</p>
+                    </li>
+                </ul>
+            </section>
         </section>
         <section>
             <p><b>SKILLS</b></p>
@@ -143,7 +187,7 @@
             </ul>
         </section>
         
-        <section>
+        <section class="noprint">
             <p><b>ARTICLES/NOTES</b></p>
             <ul style="text-indent:80px;">
                 <li>
@@ -152,7 +196,7 @@
             </ul>
         </section>
 
-        <section>
+        <section class="noprint">
             <p><b>EXAMPLES</b></p>
             <ul style="text-indent:80px;">
                 <li>
@@ -197,20 +241,26 @@
             <p><b>AUTHOR</b></p>
             <p style="text-indent:80px;">Written by Richard Prillwitz</p>
             <p style="text-indent:80px;">author[at]prillwitz.io</p>
+            <p style="text-indent:80px;" class="printonly">
+                &lt;<a href="https://github.com/xellio">https://github.com/xellio</a>&gt;
+            </p>
+            <p style="text-indent:80px;" class="printonly">
+                &lt;<a href="https://www.prillwitz.io/">https://www.prillwitz.io/</a>&gt;
+            </p>
         </section>
-        <section>
+        <section class="noprint">
             <p><b>REPORTING BUGS</b></p>
             <p style="text-indent:80px;">
                 &lt;<a href="https://github.com/xellio/xellio.github.io/issues">https://github.com/xellio/xellio.github.io/issues</a>&gt;
             </p>
         </section>
-        <section>
+        <section class="noprint">
             <p><b>COPYRIGHT</b></p>
             <p style="text-indent:80px;">
                 Copyright &copy; Richard Prillwitz
             </p>
         </section>
-        <section>
+        <section class="noprint">
             <p><b>SEE ALSO</b></p>
             <p style="text-indent:80px;">
                &lt;<a href="https://github.com/xellio">https://github.com/xellio</a>&gt; 
