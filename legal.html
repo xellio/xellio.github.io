@@ -1,48 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8"> 
-        
-        <title>Imprint</title>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Disclaimer / Impressum - Richard Prillwitz</title>
+  <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico">
+  <style>
+    @font-face {
+      font-family: 'JetBrains Mono';
+      src: url('./fonts/JetBrainsMono-latin.woff2') format('woff2');
+      font-weight: 100 900;
+      font-display: swap;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font: 14px/1.6 'JetBrains Mono', ui-monospace, monospace; color: #222; background: #f5f3ee; }
+    body { max-width: 900px; margin: 0 auto; padding: 1rem 1.5rem; }
+    header, footer { display: grid; grid-template-columns: 1fr 1fr 1fr; padding: 0.6rem 0; color: #555; }
+    header { border-bottom: 1px solid #ddd; margin-bottom: 1.5rem; }
+    footer { border-top: 1px solid #ddd; margin-top: 2rem; }
+    header :nth-child(2), footer :nth-child(2) { text-align: center; }
+    header :nth-child(3), footer :nth-child(3) { text-align: right; }
+    section { margin: 1.5rem 0; }
+    h2, h3 { font-size: 1em; font-weight: 600; letter-spacing: 0.05em; }
+    h3 { margin-top: 1rem; }
+    section > *:not(h2) { margin-left: 2.5rem; }
+    section > h3 + p { margin-top: 0.35rem; }
+    p + p { margin-top: 0.5rem; }
+    dl { display: grid; grid-template-columns: 12rem 1fr; gap: 0.35rem 1rem; margin-top: 0.5rem; }
+    dt { font-weight: 600; }
+    dd { margin: 0; }
+    a { color: inherit; }
+    .f, .dot { color: #c0392b; }
+    @media (max-width: 640px) {
+      body { padding: 0.5rem 1rem; }
+      header, footer { font-size: 0.8em; }
+      section > *:not(h2) { margin-left: 1rem; }
+      dl { grid-template-columns: 1fr; gap: 0; }
+      dt { margin-top: 0.5rem; }
+      dd { padding: 0 0 0.25rem 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <span>PRILLWITZ(1)</span>
+    <span>Disclaimer / Impressum</span>
+    <span>PRILLWITZ(1)</span>
+  </header>
 
-        <meta name="robots" content="noindex" />
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="theme-color" content="#0000ee">
-
-        <style>
-            @font-face {
-              font-family: 'Roboto Mono', monospace;
-              src: URL('https://cdn.prillwitz.io/fonts/RobotoMono-Regular.ttf') format('truetype');
-            }
-            * {
-                font-family: 'Roboto Mono', monospace;
-                font-size: 15px;
-                margin: 0;
-                padding: 0;
-            }
-            a {
-                color: #0000ee;
-            }
-            section {
-                padding-bottom: 20px;
-            }
-            ul {
-                padding-top: 10px;
-            }
-            ul li {
-                padding-bottom: 10px;
-            }
-            ul li:last-child {
-                padding-bottom:0px;
-            }
-
-            section div {
-                padding-left:80px
-            }
-        </style>
-
-    </head>
-    <body>
+  <main>
         <section>
             <p><b>DISCLAIMER</b></p>
             <div style="padding-left:80px;">
@@ -78,5 +85,12 @@
                 author[at]prillwitz.io
             </p>
         </section>
-    </body>
+  </main>
+
+  <footer>
+    <span>PRILLWITZ.IO</span>
+    <span>v2.0 - May 2026</span>
+    <span>PRILLWITZ(1)</span>
+  </footer>
+</body>
 </html>

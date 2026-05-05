@@ -1,287 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8"> 
-        <link rel='shortcut icon' type='image/x-icon' href='./favicon.ico' />
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Richard Prillwitz - Lead Backend Engineer, RAG &amp; LLM systems</title>
+  <meta name="description" content="Richard Prillwitz - Lead Backend Engineer focused on retrieval-augmented generation, agentic systems, and bringing AI/ML workflows into production.">
+  <meta name="keywords" content="Richard Prillwitz, Lead Backend Engineer, RAG, LLM, retrieval-augmented generation, AI engineering">
+  <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico">
+  <style>
+    @font-face {
+      font-family: 'JetBrains Mono';
+      src: url('./fonts/JetBrainsMono-latin.woff2') format('woff2');
+      font-weight: 100 900;
+      font-display: swap;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font: 14px/1.6 'JetBrains Mono', ui-monospace, monospace; color: #222; background: #f5f3ee; }
+    body { max-width: 900px; margin: 0 auto; padding: 1rem 1.5rem; }
+    header, footer { display: grid; grid-template-columns: 1fr 1fr 1fr; padding: 0.6rem 0; color: #555; }
+    header { border-bottom: 1px solid #ddd; margin-bottom: 1.5rem; }
+    footer { border-top: 1px solid #ddd; margin-top: 2rem; }
+    header :nth-child(2), footer :nth-child(2) { text-align: center; }
+    header :nth-child(3), footer :nth-child(3) { text-align: right; }
+    section { margin: 1.5rem 0; }
+    h2, h3 { font-size: 1em; font-weight: 600; letter-spacing: 0.05em; }
+    h3 { margin-top: 1rem; }
+    section > *:not(h2) { margin-left: 2.5rem; }
+    section > h3 + p { margin-top: 0.35rem; }
+    p + p { margin-top: 0.5rem; }
+    dl { display: grid; grid-template-columns: 12rem 1fr; gap: 0.35rem 1rem; margin-top: 0.5rem; }
+    dt { font-weight: 600; }
+    dd { margin: 0; }
+    a { color: inherit; }
+    .f, .dot { color: #c0392b; }
+    @media (max-width: 640px) {
+      body { padding: 0.5rem 1rem; }
+      header, footer { font-size: 0.8em; }
+      section > *:not(h2) { margin-left: 1rem; }
+      dl { grid-template-columns: 1fr; gap: 0; }
+      dt { margin-top: 0.5rem; }
+      dd { padding: 0 0 0.25rem 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <span>PRILLWITZ(1)</span>
+    <span>Backend &amp; AI Engineering</span>
+    <span>PRILLWITZ(1)</span>
+  </header>
 
-        <title>Richard Prillwitz - Software Developer</title>
-        
-        <meta name="description" content="Richard Prillwitz - Software Developer manpage">
-        <meta name="keywords" content="Richard Prillwitz, Software Developer, cv, cv manpage">
+  <main>
+    <section>
+      <h2>NAME</h2>
+      <p>Richard Prillwitz - Lead Backend Engineer, RAG &amp; LLM systems</p>
+    </section>
 
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="theme-color" content="#0000ee">
+    <section>
+      <h2>SYNOPSIS</h2>
+      <p><b>richard</b> <span class="f">--build</span> [<span class="f">--rag</span>] [<span class="f">--llm</span>] [<span class="f">--on-prem</span>] [<span class="f">--evaluation</span>] &lt;system&gt;</p>
+    </section>
 
-        <style>
-            @font-face {
-              font-family: 'Roboto Mono', monospace;
-              src: URL('https://cdn.prillwitz.io/fonts/RobotoMono-Regular.ttf') format('truetype');
-            }
-            * {
-                font-family: 'Roboto Mono', monospace;
-                font-size: 15px;
-                margin: 0;
-                padding: 0;
-            }
-            a {
-                color: #0000ee;
-            }
-            section {
-                padding-bottom: 20px;
-            }
-            ul {
-                padding-top: 10px;
-            }
-            ul li {
-                padding-bottom: 10px;
-            }
-            ul li:last-child {
-                padding-bottom:0px;
-            }
-            .printonly {
-                display: none;
-            }
+    <section>
+      <h2>DESCRIPTION</h2>
+      <p>Backend engineer focused on systems that have to hold up under real load. I build RAG and agent pipelines that don't just work in a notebook — they run in production, with monitoring, tests, and predictable behaviour.</p>
+    </section>
 
-            header {
-                -webkit-column-count: 3; /* Old Chrome, Safari and Opera */
-                -moz-column-count: 3; /* Old Firefox */
-                column-count: 3;
-            }
+    <section>
+      <h2>SERVICES</h2>
+      <dl>
+        <dt><span class="f">--consulting</span></dt>
+        <dd>Architecture review, vector store selection, retrieval strategy, evaluation frameworks. Honest opinions on whether RAG is the right tool for your problem.</dd>
+        <dt><span class="f">--development</span></dt>
+        <dd>End-to-end implementation. Ingestion pipelines, hybrid search, re-ranking, observability. Self-hosted (Ollama, vLLM) or hosted models - depending on your data constraints.</dd>
+        <dt><span class="f">--evaluation</span></dt>
+        <dd>Quantitative measurement of retrieval and generation quality. Replaces guesswork with numbers you can defend in front of stakeholders.</dd>
+      </dl>
+    </section>
 
-            @media print {
-                body {
-                    padding:20px;
-                }
-                .noprint {
-                    display: none;
-                }
-                .printonly {
-                    display: block;
-                }
-                ul {
-                    list-style-type: none;
-                }
-                section {
-                    padding-bottom: 10px;
-                }
-            }
-        </style>
+    <section>
+      <h2>EXPERIENCE</h2>
+      <dl>
+        <dt>2025 - present</dt><dd>Lead Backend Engineer · Myra Security GmbH</dd>
+        <dt>2022 - 2025</dt><dd>Senior Back-End Engineer · Proton AG</dd>
+        <dt>2022</dt><dd>Software Engineering Tech Lead · Myra Security GmbH</dd>
+        <dt>2017 - 2021</dt><dd>Senior Software Developer · Myra Security GmbH</dd>
+        <dt>2014 - 2017</dt><dd>Software Developer · Refined Labs GmbH</dd>
+        <dt>2013 - 2014</dt><dd>Software Developer · redblue Marketing GmbH</dd>
+        <dt>2008 - 2013</dt><dd>Software Developer · Sixt SE</dd>
+        <dt>2007 - 2008</dt><dd>Software Developer · Jenomics GmbH</dd>
+      </dl>
+    </section>
 
-    </head>
-    <body>
-        <header class="printonly">
-            <section style="text-align:left;">
-                <p>Richard Prillwitz(1)</p>
-            </section>
-            <section style="text-align:center;">
-                <p>Curriculum Vitae</p>
-            </section>
-            <section style="text-align:right;">
-                <p>Richard Prillwitz(1)</p>
-            </section>
-        </header>
-        <section>
-            <p><b>NAME</b></p>
-            <h1 style="padding-left: 80px;">Richard Prillwitz - Software Developer</h1>
-        </section>
-        <section class="printonly">
-            <p><b>DESCRIPTION</b></p>
-            <p style="text-indent:0px;">I am highly motivated and enthusiastic always willing to gain new technology related skills.<p>
-            <p style="text-indent:0px;">My personal expectation to myself is to find and deliver the best possible solution to a problem.<p>
-        </section>
-        <section>
-            <p><b>SYNOPSIS</b></p>
-            <p style="text-indent:80px;"><b>Richard Prillwitz</b> [SKILL]...</p>
-        </section>
-        <section>
-            <p><b>EXPERIENCE</b></p>
-            <section>
-                <ul style="text-indent:80px;">
-                    <li>
-                        <p><b>--Myra Security GmbH</b> <u>[Jan 2025 - Present]</u></p>
-                        <p style="text-indent:80px;">Lead Backend Engineer</p>
-                    </li>
-                    <li>
-                        <p><b>--Proton AG</b> <u>[Dec 2022 - Jan 2025]</u></p>
-                        <p style="text-indent:80px;">Senior Back-End Engineer</p>
-                    </li>
-                    <li>
-                        <p><b>--Myra Security GmbH</b> <u>[Jan 2022 - Dec 2022]</u></p>
-                        <p style="text-indent:80px;">Software Engineering Tech Lead</p>
-                    </li>
-                    <li>
-                        <p><b>--Myra Security GmbH</b> <u>[May 2017 - Dec 2021]</u></p>
-                        <p style="text-indent:80px;">Senior Software Developer</p>
-                    </li>
-                    <li>
-                        <p><b>--Refined Labs GmbH</b> <u>[Jun 2014 - May 2017]</u></p>
-                        <p style="text-indent:80px;">Software Developer</p>
-                    </li>
-                    <li>
-                        <p><b>--redblue Marketing GmbH</b> <u>[Oct 2013 - May 2014]</u></p>
-                        <p style="text-indent:80px;">Software Developer</p>
-                    </li>
-                    <li>
-                        <p><b>--Sixt SE</b> <u>[Oct 2008 - Oct 2013]</u></p>
-                        <p style="text-indent:80px;">Software Developer</p>
-                    </li>
-                    <li>
-                        <p><b>--Jenomics GmbH</b> <u>[Aug 2007 - Oct 2008]</u></p>
-                        <p style="text-indent:80px;">Software Developer</p>
-                    </li>
-                </ul>
-            </section>
-        </section>
-        <section>
-            <p><b>SKILLS</b></p>
-            <p style="text-indent:80px;">Technical</p>
-            <ul style="text-indent:80px;padding-bottom: 10px;">
-                <li>
-                    <p><b>--go, --golang, --php, --javascript, --sql</b></p>
-                </li>
-                <li>
-                    <p><b>--mysql, --postgres</b></p>
-                </li>
-                <li>
-                    <p><b>--nginx, --apache</b></p>
-                </li>
-                <li>
-                    <p><b>--linux</b></p>
-                </li>
-            </ul>
-            <p style="text-indent:80px; padding-top: 10px;">Process</p>
-            <ul style="text-indent:80px; padding-bottom: 10px;">
-                <li>
-                    <p><b>--git</b></p>
-                </li>
-                <li>
-                    <p><b>--agile, --scrum, --kanban</b></p>
-                </li>
-                <li>
-                    <p><b>--pair-programming</b></p>
-                </li>
-                <li>
-                    <p><b>--test-driven-development</b></p>
-                </li>
-                <li>
-                    <p><b>--teamwork</b></p>
-                </li>
-            </ul>
-            <p style="text-indent:80px; padding-top: 10px;">Quality</p>
-            <ul style="text-indent:80px; padding-bottom: 10px;">
-                <li>
-                    <p><b>--performance</b></p>
-                </li>
-                <li>
-                    <p><b>--clean-code</b></p>
-                </li>
-                <li>
-                    <p><b>--testing</b></p>
-                </li>
-                <li>
-                    <p><b>--security</b></p>
-                </li>
-            </ul>
-        </section>
-        <section>
-            <p><b>Certifications</b></p>
-            <ul style="text-indent:80px;">
-                <li>
-                    <p><b>--Cisco CCNA1</b></p>
-                </li>
-                <li>
-                    <p><b>--Cisco CCNA2</b></p>
-                </li>
-                <li>
-                    <p><b>--Google AdWords Advertising Fundamentals</b></p>
-                </li>
-                <li>
-                    <p><b>--Google AdWords Advanced Search</b></p>
-                </li>
-            </ul>
-        </section>
-        
-        <section class="noprint">
-            <p><b>ARTICLES/NOTES</b></p>
-            <ul style="text-indent:80px;">
-                <li>
-                    <p><b>NGINX: A+ on SSL Labs</b> [configuration] &lt;<a href="./ssllabs.html">A+ on SSL Labs</a>&gt;</p>
-                </li>
-            </ul>
-        </section>
+    <section>
+      <h2>SKILLS</h2>
+      <dl>
+        <dt>languages</dt>
+        <dd><span class="f">--go</span> <span class="f">--golang</span> <span class="f">--php</span> <span class="f">--sql</span></dd>
+        <dt>storage</dt>
+        <dd><span class="f">--mysql</span> <span class="f">--postgres</span> <span class="f">--neo4j</span> <span class="f">--redis</span> <span class="f">--rabbitmq</span></dd>
+        <dt>infra</dt>
+        <dd><span class="f">--linux</span> <span class="f">--nginx</span></dd>
+        <dt>ai/ml</dt>
+        <dd><span class="f">--RAG</span> <span class="f">--LLM</span> <span class="f">--agents</span> <span class="f">--tool-use</span> <span class="f">--orchestration</span> <span class="f">--ollama</span> <span class="f">--vllm</span> <span class="f">--evaluation</span></dd>
+        <dt>process</dt>
+        <dd><span class="f">--git</span> <span class="f">--agile</span> <span class="f">--tdd</span> <span class="f">--pair-programming</span></dd>
+      </dl>
+    </section>
 
-        <section class="noprint">
-            <p><b>EXAMPLES</b></p>
-            <ul style="text-indent:80px;">
-                <li>
-                    <p><b>logger</b> [golang] &lt;<a href="https://github.com/xellio/logger">https://github.com/xellio/logger</a>&gt;</p>
-                    <p style="text-indent:160px;">Log multiple files.</p>
-                    <p style="text-indent:160px;">Full documentation at: &lt;<a href="https://godoc.org/github.com/xellio/logger">https://godoc.org/github.com/xellio/logger</a>&gt;</p>
-                </li>
-                <li>
-                    <p><b>pxl</b> [golang] &lt;<a href="https://github.com/xellio/pxl">https://github.com/xellio/pxl</a>&gt;</p>
-                    <p style="text-indent:160px;">Convert files to png images.</p>
-                    <p style="text-indent:160px;">Full documentation at: &lt;<a href="https://godoc.org/github.com/xellio/pxl">https://godoc.org/github.com/xellio/pxl</a>&gt;</p>
-                </li>
-                <li>
-                    <p><b>tools</b> [golang] &lt;<a href="https://github.com/xellio/tools">https://github.com/xellio/tools</a>&gt;</p>
-                    <p style="text-indent:160px;">GO wrapper for linux tools.</p>
-                    <p style="text-indent:160px;">Full documentation at: &lt;<a href="https://godoc.org/github.com/xellio/tools">https://godoc.org/github.com/xellio/tools</a>&gt;</p>
-                </li>
-                <li>
-                    <p><b>whois</b> [golang] &lt;<a href="https://github.com/xellio/whois">https://github.com/xellio/whois</a>&gt;</p>
-                    <p style="text-indent:160px;">GO wrapper for whois command.</p>
-                    <p style="text-indent:160px;">Full documentation at: &lt;<a href="https://godoc.org/github.com/xellio/whois">https://godoc.org/github.com/xellio/whois</a>&gt;</p>
-                </li>
-                <li>
-                    <p><b>ns</b> [golang] &lt;<a href="https://github.com/xellio/ns">https://github.com/xellio/ns</a>&gt;</p>
-                    <p style="text-indent:160px;">Network scanner - Stores result to a mysql database.</p>
-                    <p style="text-indent:160px;">Full documentation at: &lt;<a href="https://godoc.org/github.com/xellio/ns">https://godoc.org/github.com/xellio/ns</a>&gt;</p>
-                </li>
-                <li>
-                    <p><b>fire</b> [golang] &lt;<a href="https://github.com/xellio/fire">https://github.com/xellio/fire</a>&gt;</p>
-                    <p style="text-indent:160px;">Send HTTP requests defined in a JSON file.</p>
-                    <p style="text-indent:160px;">Full documentation at: &lt;<a href="https://godoc.org/github.com/xellio/fire">https://godoc.org/github.com/xellio/fire</a>&gt;</p>
-                </li>
-                <li>
-                    <p><b>golang-plugin-example</b> [golang] &lt;<a href="https://github.com/xellio/golang-plugin-example">https://github.com/xellio/golang-plugin-example</a>&gt;</p>
-                    <p style="text-indent:160px;">An example application for using plugins in go.</p>
-                    <p style="text-indent:160px;">Full documentation at: &lt;<a href="https://github.com/xellio/golang-plugin-example">https://github.com/xellio/golang-plugin-example</a>&gt;</p>
-                </li>
-            </ul>
-        </section>
+    <section>
+      <h2>AVAILABILITY</h2>
+      <p><span class="dot">●</span> <b>open</b> for new RAG engagements - part-time, project-based.</p>
+    </section>
 
-        <section class="noprint">
-            <p><b>AUTHOR</b></p>
-            <p style="text-indent:80px;">Written by Richard Prillwitz</p>
-            <p style="text-indent:80px;">author[at]prillwitz.io</p>
-            <p style="text-indent:80px;" class="printonly">
-                &lt;<a href="https://github.com/xellio">https://github.com/xellio</a>&gt;
-            </p>
-            <p style="text-indent:80px;" class="printonly">
-                &lt;<a href="https://www.prillwitz.io/">https://www.prillwitz.io/</a>&gt;
-            </p>
-        </section>
-        <section class="noprint">
-            <p><b>REPORTING BUGS</b></p>
-            <p style="text-indent:80px;">
-                &lt;<a href="https://github.com/xellio/xellio.github.io/issues">https://github.com/xellio/xellio.github.io/issues</a>&gt;
-            </p>
-        </section>
-        <section class="noprint">
-            <p><b>COPYRIGHT</b></p>
-            <p style="text-indent:80px;">
-                Copyright &copy; Richard Prillwitz
-            </p>
-        </section>
-        <section class="noprint">
-            <p><b>SEE ALSO</b></p>
-            <p style="text-indent:80px;">
-               &lt;<a href="https://github.com/xellio">https://github.com/xellio</a>&gt; 
-            </p>
-            <p style="text-indent:80px;">
-               &lt;<a href="./legal.html">disclaimer/imprint</a>&gt; 
-            </p>
-        </section>
-    </body>
+    <section>
+      <h2>CONTACT</h2>
+      <dl>
+        <dt>email</dt><dd><a href="mailto:author@prillwitz.io">author[at]prillwitz.io</a></dd>
+        <dt>github</dt><dd><a href="https://github.com/xellio">github.com/xellio</a></dd>
+        <dt>linkedin</dt><dd><a href="https://linkedin.com/in/richard-prillwitz">linkedin.com/in/richard-prillwitz</a></dd>
+      </dl>
+    </section>
+
+    <section>
+      <h2>SEE ALSO</h2>
+      <p><a href="./legal.html">disclaimer / impressum</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <span>PRILLWITZ.IO</span>
+    <span>v2.0 - May 2026</span>
+    <span>PRILLWITZ(1)</span>
+  </footer>
+</body>
 </html>
